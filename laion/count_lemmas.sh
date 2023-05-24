@@ -1,0 +1,1 @@
+seq -w 00000 00031 | xargs -P31 -I{} bash -c 'python3 ./count_lemmas.py non_leaf_synsets_first_lemmas.json $PATH_TO_LAION_400M/part-{}-5b54c5d5-bbcf-484d-a2ce-0d6f73df1a36-c000.snappy.parquet 400m_lemma_counts {}'
